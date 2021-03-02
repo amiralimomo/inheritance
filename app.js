@@ -14,5 +14,14 @@ let User = function (name, balance) {
         return name
     }
 }
+
+
 let user1=new User('amirali',7800)
-console.log(user1.getrole())
+// console.log(user1.getrole())
+
+
+
+User.prototype.getbalance=function(){
+    return this.balance
+    }
+console.log(user1.getbalance())
