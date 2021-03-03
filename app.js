@@ -24,4 +24,13 @@ let user1=new User('amirali',7800)
 User.prototype.getbalance=function(){
     return this.balance
     }
-console.log(user1.getbalance())
+// console.log(user1.getbalance())
+
+
+let Client=function(name,balance,phone){
+User.call(this,name,balance)
+this.phone=phone
+}
+Client.prototype=Object.create(User.prototype)
+let client1=new Client('momo',700,989387749878)
+console.log(client1.getrole())
